@@ -1,0 +1,144 @@
+.col-item{border:1px solid #E1E1E1;border-radius:5px;background:#FFF}.col-item .photo img{margin:0 auto;width:100%}.col-item .info{padding:10px;border-radius:0 0 5px 5px;margin-top:1px}.col-item:hover .info{background-color:beige}.col-item .price{float:left;margin-top:5px}.col-item .price h5{line-height:20px;margin:0}.price-text-color{color:#219FD1}.col-item .info .rating{color:#777}.col-item .rating{float:left;font-size:17px;text-align:right;line-height:52px;margin-bottom:10px;height:52px}.col-item .separator{border-top:1px solid #E1E1E1}.clear-left{clear:left}.col-item .separator p{line-height:20px;margin-bottom:0;margin-top:10px;text-align:center}.col-item .separator p i{margin-right:5px}.col-item .btn-add{width:50%;float:left;border-right:1px solid #E1E1E1}.col-item .btn-details{width:50%;float:left;padding-left:10px}.controls{margin-top:20px}[data-slide=prev]{margin-right:10px}.navbar--opened .navbar--apple::before{height:100%}.navbar--apple::before{background:rgba(0,0,0,.8);transition:height .2s ease-in;height:50px;position:fixed;top:0;bottom:0;left:0;right:0;content:'';z-index:-1}@media (min-width:768px){.navbar--apple::before{height:50px!important}}.navbar--opened .navbar--apple::before{background:rgba(0,0,0,.93)}.navbar--apple .nav-link{color:#fff!important;font-size:13px}.navbar--apple .apple-logo{font-size:21px;line-height:0}.navbar--apple{background-color:initial!important}.navbar--apple .navbar-toggler{padding:0;font-size:1.25rem;line-height:1;border:0;border-radius:0}.navbar--apple .navbar-toggler-icon{background-image:none;line-height:2rem}@media (max-width:576px){.navbar--apple #menu{padding-left:40px;padding-right:40px}.navbar--apple #menu li a{font-size:17px;border-bottom:1px solid rgba(255,255,255,.1)}}
+.table-fixed {
+    overflow-y: auto;
+    height:500px;
+}
+
+.table-fixed table{
+    width: 100%;
+    table-layout: fixed; 
+    border-spacing: 1px;
+}
+
+.table-fixed table th {
+    top:0;
+    position: sticky;
+    background-color: #5B2A8C;  
+}
+
+
+/* Scroll primary Table*/
+.table-fixed::-webkit-scrollbar {
+    width: 15px;
+    height: 8px;
+}
+
+/* Estilos barra (thumb) de scroll */
+.table-fixed::-webkit-scrollbar-thumb {
+    background: #5B2A8C;
+    border-radius: 0px;
+}
+
+.table-fixed::-webkit-scrollbar-thumb:active {
+    background-color: red;
+}
+
+.table-fixed::-webkit-scrollbar-thumb:hover {
+    background: #5B2A8C;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos track de scroll */
+.table-fixed::-webkit-scrollbar-track {
+    background: white;
+    
+}
+
+.table-fixed::-webkit-scrollbar-track:hover, 
+.table-fixed::-webkit-scrollbar-track:active {
+    
+}
+
+
+/* Scroll primary APP*/
+body::-webkit-scrollbar {
+    width: 15px;
+    height: 8px;
+}
+
+/* Estilos barra (thumb) de scroll */
+body::-webkit-scrollbar-thumb {
+    background: #5B2A8C;
+    border-radius: 0px;
+}
+
+body::-webkit-scrollbar-thumb:active {
+    background-color: red;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: #5B2A8C;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos track de scroll */
+body::-webkit-scrollbar-track {
+    background: #8836BF;
+}
+
+body::-webkit-scrollbar-track:hover, 
+body::-webkit-scrollbar-track:active {
+    //background: white;
+}
+
+/**
+* Colores jhon Robert
+*/
+
+.jr-primary {
+    background-color: #5B2A8C;
+}
+
+.btn-dark {
+    background-color: #762EA6;
+}
+
+.btn-dark:hover {
+    background-color:  #8836BF;
+}
+
+.btn-outline-info:hover {
+    color: #fff;
+    background-color: #6A36D9;
+}
+
+.btn-outline-info {
+    color: #fff;
+    border-color: #6A36D9;
+}
+
+.btn-outline-danger {
+    color: white;
+    border-color: #A993BF;
+    
+}
+
+.btn-outline-danger:hover {
+    background-color: #A993BF;
+    color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-info {
+    background-color: #6A36D9;
+}
+.btn-info:hover {
+    background-color: #8836BF;
+}
+
+.table-dark {
+    background-color: #8836BF;
+}
+/**
+----------------------------------------
+ navbar 
+--------------------------------------------
+*/
+
+.navbar-size-lg {
+    padding: 1rem 1rem !important;
+}
+
+.navbar-size-xs {
+    padding: .5rem 1rem !important;
+}
