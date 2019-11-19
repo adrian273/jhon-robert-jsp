@@ -40,7 +40,7 @@
 
 /* Estilos track de scroll */
 .table-fixed::-webkit-scrollbar-track {
-    background: white;
+    background: #8836BF;
     
 }
 
@@ -89,12 +89,25 @@ body::-webkit-scrollbar-track:active {
     background-color: #5B2A8C;
 }
 
+.jr-primary-gra {
+    background-color: #5B2A8C;
+    background: linear-gradient(90deg, #5B2A8C 12%, #762EA6 45%, #6A36D9 100%);
+}
+
 .btn-dark {
     background-color: #762EA6;
 }
 
 .btn-dark:hover {
     background-color:  #8836BF;
+}
+
+.btn-secondary {
+    background-color: #6A36D9;
+}
+
+.btn-secondary:hover {
+    background-color: #8836BF;
 }
 
 .btn-outline-info:hover {
@@ -129,6 +142,15 @@ body::-webkit-scrollbar-track:active {
 .table-dark {
     background-color: #8836BF;
 }
+
+.badge-primary {
+    background-color: #5B2A8C;
+}
+
+.badge-warning {
+    background-color: #A993BF;
+}
+
 /**
 ----------------------------------------
  navbar 

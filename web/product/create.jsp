@@ -10,10 +10,10 @@
 
 <jsp:include page="../layouts/header.jsp"></jsp:include>
 <c:set var="path" value="<%= request.getServletContext().getContextPath()%>"></c:set>
-    <div class="card bg-dark text-white">
-        <form action="<%=request.getContextPath()%>/test" id="product-store" method="post" enctype="multipart/form-data">
+    <div class="card">
+        <form action="<%=request.getContextPath()%>/producto" id="product-store" method="post" enctype="multipart/form-data">
         <input type="hidden" name="type" value="store">
-        <div class="card-header ">
+        <div class="card-header jr-primary text-white">
             <h1 class="text-center">Agregar Nuevo Producto</h1>
         </div>
         <div class="card-body">

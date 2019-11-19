@@ -43,7 +43,7 @@
             <div class="col-12">
                 <!-- Start: Navbar -->
                 <header>
-                    <nav class="navbar navbar-dark navbar-size-lg jr-primary navbar-expand-md fixed-top">
+                    <nav class="navbar navbar-dark navbar-size-lg jr-primary-gra navbar-expand-md fixed-top">
                         <div class="container">
                             <a class="navbar-brand" href="${path}/index.jsp">
                                 <img src="${path}/assets/img/logos/black.png" 

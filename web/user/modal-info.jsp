@@ -7,20 +7,20 @@
 <!-- MODAL Informacion de la orden -->
 
 <div class="modal bd-example-modal-xl animated fadeInLeft" style="color:white;background-color: #4492e033;" id="myModalUser" role="dialog">
-    <div class="modal-dialog modal-xl bg-dark" tabindex="-1">
+    <div class="modal-dialog modal-xl jr-primary" tabindex="-1">
         <button type="button" class="btn btn-outline-info" style="float:right;border-radius: 0px;cursor: pointer !important;" 
                 data-dismiss="modal">&times;</button>
         <!-- Modal content-->
-        <div class="modal-content bg-dark">
-            <div class="modal-header">
+        <div class="modal-content">
+            <div class="modal-header jr-primary">
                 <h4 class="modal-title">
                     Datos del Usuario
                 </h4>
             </div>
-            <form id="user-form">
-                <div class="modal-body" id="info-user-list">
+            <form id="user-form" >
+                <div class="modal-body" style="color:black;" id="info-user-list">
                     <div class="update-alert"></div>
-                    <div class="jumbotron bg-dark">
+                    <div class="jumbotron">
                         <input type="hidden" value="0" id="id-user">
                         <input type="hidden" value="0" class="status-reload" name="status_reload"> <!-- Para ver si lo recargo o nop -->
                         <h1 class="display-4" id="name"></h1>

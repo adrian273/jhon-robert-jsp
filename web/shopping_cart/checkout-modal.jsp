@@ -13,13 +13,13 @@
 %>
 <!-- MODAL CheckOut -->
 <div class="modal bd-example-modal-xl" style="color:white;background-color: #4492e033;" id="myModal" role="dialog">
-    <div class="modal-dialog modal-xl bg-dark" tabindex="-1">
+    <div class="modal-dialog modal-xl jr-primary" tabindex="-1">
         <button type="button" class="btn btn-outline-info" style="float:right;border-radius: 0px;cursor: pointer !important;" 
                 data-dismiss="modal">&times;</button>
                 
         <!-- Modal content-->
-        <div class="modal-content bg-dark">
-            <div class="modal-header">
+        <div class="modal-content">
+            <div class="modal-header jr-primary">
                 <h4 class="modal-title">
                     Datos para el envio y confirmacion de la compra
                 </h4>
@@ -29,7 +29,7 @@
                 <input type="hidden" name="type" value="checkout">
                 <input type="hidden" name="shipping" value="" id="shipping">
                 <input type="hidden" name="orders_id" value="<%= order_id %>">
-                <div class="modal-body">
+                <div class="modal-body" style="color:black;">
                     <div class="msg-checkout-cart"></div>
                     <h4>Direccion</h4>
                     <hr>
@@ -56,13 +56,17 @@
                             <div class="row">
                                 <div class="col-9">
                                     <div class="form-group">
-                                        <label for="" class="form-check-label">Direccion</label>
+                                        <label for="" class="form-check-label">
+                                            <b>Direccion</b>
+                                        </label>
                                         <input type="text" class="form-control" id="address" name="address">
                                     </div>
                                 </div>
                                 <div class="col-3">
                                     <div class="form-group">
-                                        <label for="" class="form-check-label">Num Casa</label>
+                                        <label for="" class="form-check-label">
+                                            <b>Num Casa</b>
+                                        </label>
                                         <input type="text" class="form-control" name="num">
                                     </div>
                                 </div>
@@ -70,7 +74,9 @@
                         </div>
                         <div class="col-6">
                             <div class="form-group">
-                                <label for="" class="form-check-label">Telefono</label>
+                                <label for="" class="form-check-label">
+                                    <b>Telefono</b>
+                                </label>
                                 <input type="text" class="form-control" name="phone">
                             </div> 
                         </div>

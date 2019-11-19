@@ -20,14 +20,14 @@
     <div class="row">
         <input type="hidden" id="orders_id" value="<%= order_id%>">
     <div class="col-8">  
-        <div class="card jr-primary">
-            <div class="card-header text-white text-center text-uppercase">
+        <div class="card">
+            <div class="card-header text-white jr-primary text-center text-uppercase">
                 Total de productos Agregados: 
                 <span class="count-shopping-cart">0</span> 
                 <i class="fas fa-shopping-bag"></i>
             </div>
             <div class="card-body">
-                <table class="table table-hover table-borderless"> 
+                <table class="table table-hover table-borderless" style="color:black;"> 
                     <thead>
                         <tr>
                             <th colspan="4">
@@ -38,7 +38,7 @@
                             <th></th>
                         </tr>
                     </thead>
-                    <thead class="bg-info">
+                    <thead class="jr-primary text-white">
                         <tr>
                             <th>Nombre</th>
                             <th>Precio</th>
@@ -46,7 +46,7 @@
                             <th></th>
                         </tr>
                     </thead>
-                    <tbody class="text-white">
+                    <tbody class="">
                         <%
                             ResultSet r = (ResultSet) request.getAttribute("rows_cart");
                             while (r.next()) {
@@ -75,7 +75,7 @@
                                type="number" name="quantity" class="form-control" value="<%= quantity%>">
                     </td>
                     <td>
-                        <button class="btn btn-outline-danger" onclick="deleteOrder(<%= r.getString("oi.id")%>)"> 
+                        <button class="btn btn-danger" onclick="deleteOrder(<%= r.getString("oi.id")%>)"> 
                             <i class="fas fa-trash-alt"></i> 
                         </button>
                     </td>
@@ -101,8 +101,8 @@
     </div>
     <!-- monto total ---------------------------------------------------------->                
     <div class="col-4"> 
-        <div class="card jr-primary text-white">
-            <div class="card-header text-center text-uppercase">
+        <div class="card">
+            <div class="card-header jr-primary text-white text-center text-uppercase">
                 <h1> Orden N° <%= order_id%>  </h1>
             </div>
             <div class="card-body">
@@ -111,7 +111,7 @@
             </div>
             <div class="card-footer">
                 <!--<button class="btn btn-outline-info btn-block" id="checkout-shopping-cart"> Realizar pedido </button>-->
-                <button class="btn btn-outline-info btn-block" id="checkout-shopping-cart"> Realizar pedido </button>
+                <button class="btn btn-info btn-block" id="checkout-shopping-cart"> Realizar pedido </button>
             </div>
         </div>
     </div>

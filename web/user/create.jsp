@@ -7,13 +7,13 @@
 <jsp:include page="../layouts/header.jsp"></jsp:include>
 <c:set var="path" value="<%= request.getServletContext().getContextPath()%>"></c:set>
     <div class="col-12 mb-5">
-        <div class="card bg-dark text-white mb-5"> 
-            <div class="card card-header">
-                <h1 class="text-center">Ingreso</h1>
+        <div class="card mb-5"> 
+            <div class="card jr-primary text-white card-header">
+                <h1 class="text-center">Nuevo Registro <i class="far fa-gem"></i></h1>
             </div>
             <form action="${path}/userc" method="post">
                 <input type="hidden" value="create" name="type">
-                <div class="card card-body bg-dark">
+                <div class="card card-body">
                     <div class="row">
                         <div class="col-6">
                             <div class="form-group">

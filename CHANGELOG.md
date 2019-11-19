@@ -2,6 +2,23 @@
 
 # John Robert jewelry
 
+## [0.9.93] 19/11/2019
+## Updated
+- Cambio diseño en crear nuevo usuario;;
+- cambio diseño nav
+- cambio diseño en agregar productos
+- Cambio de diseño en lista de usuarios
+- cambio de diseño en lista de todas las ordenes
+- cambio de diseño en lista de mis ordenes
+- cambio de diseño en edicion de usuario
+- cambio en diseño de modal de vista de informacion del usuario
+- cambio en diseño de edicion de productos
+- cambio en ediseño de modal de info de checkout cart
+- - cambio en ediseño de modal de info de ordenes
+- Cambio de diseño en carrito de compras
+## Fixed
+- Cambio de controllador en producto para que ingrese productos
+
 ## [0.9.92] 18/11/2019
 ## Updated
 - Cambio de color,estilo, titulo y categorias del navbar

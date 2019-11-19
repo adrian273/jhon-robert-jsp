@@ -24,8 +24,8 @@
 </div>
 <% }%>
 <div class="col-12 mb-5">
-    <div class="card bg-dark mb-5 text-white"> 
-        <div class="card card-header">
+    <div class="card mb-5 "> 
+        <div class="card text-white jr-primary card-header">
             <h1 class="text-center">Edicion <i class="fa fa-pencil"></i> </h1>
         </div>
         <form action="${path}/userc" method="post">

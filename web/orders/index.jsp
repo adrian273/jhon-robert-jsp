@@ -22,11 +22,10 @@
             title="Presiona la celda para editar o ver informacion">
         <i class="far fa-question-circle"></i>
     </button>
-
+    <h4> Lista de Ordenes </h4>
     <div class="table-fixed">
-        <table class="table table-hover table-dark">
-            <h4> Lista de Ordenes </h4>
-            <thead>
+        <table class="table table-hover table-active">
+            <thead class="text-white">
                 <tr> 
                     <th>Id</th>
                     <th>Nombre Cliente</th>

@@ -22,13 +22,13 @@
     data.first();
     //System.out.println(data);
 %>
-<div class="card bg-dark text-white">
+<div class="card">
 
     <form action="<%=request.getContextPath()%>/producto" method="post">
 
         <input type="hidden" name="type" value="update">
         <input type="hidden" name="id" value="<%= data.getString("id")%>">
-        <div class="card-header ">
+        <div class="card-header jr-primary text-white">
             <h1 class="text-center"> <a href="<%=request.getContextPath()%>/producto?action=view" class="btn btn-info">Volver <i class="fas fa-arrow-alt-circle-left"></i> </a> Editar Nuevo Producto </h1>
         </div>
         <div class="card-body">

@@ -27,8 +27,8 @@
 
 <jsp:include page="../layouts/show-hide-btn.jsp"></jsp:include>             
 <div class="table-fixed col-12">
-    <table class="table table-hover table-dark">
-        <thead>
+    <table class="table table-hover table-active">
+        <thead class="text-white">
             <tr>
                 <th>Id</th>
                 <th>Nombre</th>
