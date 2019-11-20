@@ -180,3 +180,18 @@ body::-webkit-scrollbar-track:active {
 .navbar-size-xs {
     padding: .5rem 1rem !important;
 }
+
+
+/**
+-------------------------------------------
+footer
+-------------------------------------------
+*/
+
+#footer-primary a {
+    color: white;
+}
+
+#footer-primary a:hover {
+    color: #A993BF;
+}

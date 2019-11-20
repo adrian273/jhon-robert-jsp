@@ -2,6 +2,16 @@
 
 # John Robert jewelry
 
+# [0.9.95] 20/11/2019
+## Updated
+- cambio en diseño del index
+- cambio de diseño del footer
+## Added
+- Vistas de informacion y contacto en index
+- pagina de contacto
+## Fixed
+- Cambio de valores de menu en el footer
+
 ## [0.9.94] 19/11/2019
 ## Updated
 - diseño del login

@@ -24,15 +24,20 @@
     </a>
 </div>
 <% }%>
-<div class="col-12">
-    <!-- Start: MUSA_carousel-product-cart-slider -->
-    <div class="container">
-        <jsp:include page="layouts/product-testimony.jsp"></jsp:include>
+
+
+<div class="container-fluid">
+
+    <jsp:include page="layouts/product-testimony.jsp"></jsp:include>
+    </div>
+    <div class="col-12">
+        <!-- Start: MUSA_carousel-product-cart-slider -->
+        <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h3 class="text-uppercase text-center">
+                    <h1 class="text-uppercase text-center">
                         Ultimos Productos Agregados
-                    </h3>
+                    </h1>
                 </div>
             <%--<div class="row">
                 <div class="col-md-9">
@@ -117,10 +122,14 @@
                     </div>
                 </div>
             </div>
-            <jsp:include page="layouts/customer-testimony.jsp"></jsp:include>
+
         </div>
     </div>
     <!-- End: MUSA_carousel-product-cart-slider -->
+</div>
+<div class="container-fluid">
+    <jsp:include page="layouts/customer-testimony.jsp"></jsp:include>
+    <jsp:include page="help/contact-base.jsp"></jsp:include>
 </div>
 <jsp:include page="product/more-info-product.jsp"></jsp:include>
 <jsp:include page="layouts/footer.jsp"></jsp:include>

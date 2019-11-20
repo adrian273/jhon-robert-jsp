@@ -14,7 +14,7 @@
     id = String.valueOf(ses.getAttribute("id_user"));
 %>
 <c:set var="path" value="<%= request.getContextPath()%>"></c:set>
-    <footer class="footer mt-auto py-3"  style="">
+<footer class="footer mt-auto py-3 jr-primary-gra text-white"  style="" id="footer-primary">
         <div class="container-fluid">
             <div class="col-12">
                 <div class="row">  
@@ -26,19 +26,19 @@
                                style="font-family: Aclonica, sans-serif;">Inicio</a></li>
                         <li class="nav-item">
                             <a class="nav-link" 
-                               href="<%=request.getContextPath()%>/producto?action=prod&category=bicicletas">Bicicletas</a>
+                               href="<%=request.getContextPath()%>/producto?action=prod&category=cadenas">Cadenas</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" 
-                               href="<%=request.getContextPath()%>/producto?action=prod&category=accesorios">Accesorios</a>
+                               href="<%=request.getContextPath()%>/producto?action=prod&category=pulseras">Pulseras</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" 
-                               href="<%=request.getContextPath()%>/producto?action=prod&category=componentes">Componentes</a>
+                               href="<%=request.getContextPath()%>/producto?action=prod&category=anillos">Anillos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" 
-                               href="<%=request.getContextPath()%>/producto?action=prod&category=indumentaria">Indumentaria</a>
+                               href="<%=request.getContextPath()%>/producto?action=prod&category=aros">Aros</a>
                         </li>
                     </ul>
                 </div>
@@ -47,7 +47,7 @@
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a class="nav-link" 
-                               href="<%=request.getContextPath()%>">Contacto</a>
+                               href="<%=request.getContextPath()%>/help/contact.jsp">Contacto</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" 
