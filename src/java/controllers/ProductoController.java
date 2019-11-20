@@ -7,18 +7,23 @@ package controllers;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.math.BigDecimal;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.json.Json;
+import javax.json.JsonObjectBuilder;
+import javax.json.JsonValue;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import models.ProductModel;
 
 /**
@@ -38,10 +43,42 @@ public class ProductoController extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, ClassNotFoundException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
 
+        }
+    }
+
+    /**
+     *
+     * @param request
+     * @param response
+     * @param id
+     * @throws ServletException
+     * @throws IOException
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     */
+    protected void moreInfo(HttpServletRequest request, HttpServletResponse response, String id)
+            throws ServletException, IOException, ClassNotFoundException, SQLException {
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter()) {
+            ProductModel promdl = new ProductModel();
+            ResultSet data = promdl.getProductById(id);
+            JsonObjectBuilder json = Json.createObjectBuilder();
+            HttpSession session = request.getSession();
+            
+            data.first();
+            json.add("name", data.getString("name"));
+            json.add("id", data.getString("id"));
+            json.add("description", data.getString("description"));
+            json.add("price", data.getString("products.price"));
+            json.add("image", data.getString("image"));
+            json.add("categories_name", data.getString("categories.name"));
+            json.add("stock", data.getString("stock"));
+            json.add("auth", String.valueOf(session.getAttribute("login")));
+            out.print(json.build());
         }
     }
 
@@ -67,14 +104,14 @@ public class ProductoController extends HttpServlet {
     }
 
     /**
-     * 
+     *
      * @param request
      * @param response
      * @param id
      * @throws IOException
      * @throws ClassNotFoundException
      * @throws SQLException
-     * @throws ServletException 
+     * @throws ServletException
      */
     protected void deleteProduct(HttpServletRequest request, HttpServletResponse response, String id) throws IOException, ClassNotFoundException, SQLException, ServletException {
         ProductModel pm = new ProductModel();
@@ -90,14 +127,14 @@ public class ProductoController extends HttpServlet {
     }
 
     /**
-     * 
+     *
      * @param request
      * @param response
      * @param id
      * @throws IOException
      * @throws ClassNotFoundException
      * @throws SQLException
-     * @throws ServletException 
+     * @throws ServletException
      */
     protected void viewDetailProduct(HttpServletRequest request, HttpServletResponse response, String id) throws IOException, ClassNotFoundException, SQLException, ServletException {
         ProductModel pm = new ProductModel();
@@ -213,6 +250,18 @@ public class ProductoController extends HttpServlet {
                     rq.forward(request, response);
                 } catch (ClassNotFoundException | SQLException ex) {
                     Logger.getLogger(ProductoController.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                break;
+            case "more-info":
+                String id_prod = request.getParameter("i");
+                 {
+                    try {
+                        moreInfo(request, response, id_prod);
+                    } catch (ClassNotFoundException ex) {
+                        Logger.getLogger(ProductoController.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (SQLException ex) {
+                        Logger.getLogger(ProductoController.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 }
                 break;
             default:

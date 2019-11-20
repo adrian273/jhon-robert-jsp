@@ -63,7 +63,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 body::-webkit-scrollbar-thumb:active {
-    background-color: red;
+    background-color: #5B2A8C;
 }
 
 body::-webkit-scrollbar-thumb:hover {
@@ -84,6 +84,22 @@ body::-webkit-scrollbar-track:active {
 /**
 * Colores jhon Robert
 */
+
+.jr-primary-text {
+    color: #5B2A8C;
+}
+
+.jr-secondary-text {
+    color: #6A36D9;
+}
+
+.jr-warning-text {
+    color: #A993BF;
+}
+
+.jr-info-text {
+    color: #8836BF;
+}
 
 .jr-primary {
     background-color: #5B2A8C;

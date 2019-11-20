@@ -2,7 +2,18 @@
 
 # John Robert jewelry
 
-## [0.9.93] 19/11/2019
+## [0.9.94] 19/11/2019
+## Updated
+- diseño del login
+- nombre de footer
+## Added
+- mas informacion del producto
+- agregado nuevo diseño de animaciones (wow)
+- testimonio de productos
+- testimonio de clientes
+## Removed
+- file js/css de login..
+## [0.9.93] (misma fecha)
 ## Updated
 - Cambio diseño en crear nuevo usuario;;
 - cambio diseño nav

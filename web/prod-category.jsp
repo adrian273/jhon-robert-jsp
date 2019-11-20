@@ -54,13 +54,13 @@
 
                             %>
                             <!-- panel del producto -->
-                            <div class="col-setting col-md-4 mb-5 mt-5 col-sm-4 col-xs-12">
+                            <div class="col-setting wow animated fadeInLeft col-md-4 mb-5 mt-5 col-sm-4 col-xs-12">
                                 <div class="col-item">
                                     <div class="photo">
-                                        <% if (rs.getString("image").equals("null") || rs.getString("image") == "" ||  rs.getString("image").equals(null) ) { %>
+                                        <% if (rs.getString("image").equals("null") || rs.getString("image") == "" || rs.getString("image").equals(null)) { %>
                                         <img src="assets/img/default.jpg" class="img-responsive" alt="a" />
-                                        <% } else { %>
-                                        <img src="<%= rs.getString("image") %>" class="img-responsive" alt="a" />
+                                        <% } else {%>
+                                        <img src="<%= rs.getString("image")%>" class="img-responsive" alt="a" />
                                         <% }%>
                                     </div>
                                     <div class="info">
@@ -90,7 +90,12 @@
                                                     </c:choose>
                                             </p>
                                             <p class="btn-details">
-                                                <a href="#" class="hidden-sm btn btn-dark">Mas detalles <i class="fa fa-list"></i></a></p>
+                                                <input type="hidden" class="id-prod-val" value="">
+                                                <a href="#!" class="hidden-sm btn btn-dark" id="more-info-prod<%= rs.getString("id")%>" 
+                                                   onclick="moreInfo(this, <%= rs.getString("id")%>, <%= order_id%>)">
+                                                    Mas detalles <i class="fa fa-list"></i>
+                                                </a>
+                                            </p>
                                         </div>
                                         <div class="clearfix">
                                         </div>
@@ -113,5 +118,5 @@
     </div>
     <!-- End: MUSA_carousel-product-cart-slider -->
 </div>
-
+<jsp:include page="product/more-info-product.jsp"></jsp:include>
 <jsp:include page="layouts/footer.jsp"></jsp:include>

@@ -102,7 +102,7 @@
 <footer class="footer mt-auto py-1" style="">
     <div class="col-12"> 
         <p class="text-center">
-            Velociped &reg; 2019 - Desarrollado por <a href="#!" target="blank"> Adrian </a>
+            Joyeria Jhon Robert &reg; 2019 - Desarrollado por <a href="https://github.com/adrian273" target="blank"> Adrian </a>
         </p>
     </div>
 </footer>
@@ -111,9 +111,11 @@
 
 <script src="${path}/assets/js/jquery.js"></script>
 <script src="${path}/assets/js/bootstrap.js"></script>
+<script src="${path}/assets/js/wow.min.js"></script>
 <script src="${path}/assets/js/script.min.js"></script>
 <script>
-
+    
+    new WOW().init();
 
     function load_count_shopping() {
         var count = "0";

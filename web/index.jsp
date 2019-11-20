@@ -25,14 +25,18 @@
 </div>
 <% }%>
 <div class="col-12">
-    <!-- Start: MUSA_carousel-product-cart-slider --><div class="container">
-
-        <div class="row">
+    <!-- Start: MUSA_carousel-product-cart-slider -->
+    <div class="container">
+        <jsp:include page="layouts/product-testimony.jsp"></jsp:include>
             <div class="row">
-                <div class="col-md-9">
-                    <h3 class="text-uppercase">
+                <div class="col-12">
+                    <h3 class="text-uppercase text-center">
                         Ultimos Productos Agregados
                     </h3>
+                </div>
+            <%--<div class="row">
+                <div class="col-md-9">
+                   
                 </div>
                 <div class="col-md-3">
                     <!-- Controls -->
@@ -42,7 +46,7 @@
                            data-slide="next"></a>
                     </div>-->
                 </div>
-            </div>
+            </div> --%>
             <div id="carousel-example-generic" class="carousel slide hidden-xs" data-ride="carousel">
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner">
@@ -58,7 +62,7 @@
                             %>
                             <!-- panel del producto -->
                             <div class="col-setting col-md-4 mb-5 mt-5 col-sm-4 col-xs-12">
-                                <div class="col-item">
+                                <div class="col-item wow animated fadeInLeft">
                                     <div class="photo">
                                         <img src="assets/img/default.jpg" class="img-responsive" alt="a" />
                                     </div>
@@ -81,15 +85,20 @@
                                             <p class="btn-add">
                                                 <c:choose>
                                                     <c:when test="${login == true}">
-                                                        <button class="hidden-sm btn btn-dark" onclick="add_cart(this, <%= rs.getString("id")%>, <%= order_id %>, <%= rs.getString("price")%>, <%= rs.getString("stock")%>)">Agregar <i class="fa fa-shopping-cart"></i></button>
-                                                    </c:when>
-                                                    <c:when test="${login != true}">
+                                                        <button class="hidden-sm btn btn-dark" onclick="add_cart(this, <%= rs.getString("id")%>, <%= order_id%>, <%= rs.getString("price")%>, <%= rs.getString("stock")%>)">Agregar <i class="fa fa-shopping-cart"></i></button>
+                                                        </c:when>
+                                                        <c:when test="${login != true}">
                                                         <button class="hidden-sm btn btn-dark" disabled="disabled" title="Inicie session, para agregar productos"> Agregar <i class="fa fa-shopping-cart"></i></button>
                                                         </c:when>
                                                     </c:choose>
                                             </p>
                                             <p class="btn-details">
-                                                <a href="#" class="hidden-sm btn btn-dark">Mas detalles <i class="fa fa-list"></i></a></p>
+                                                <input type="hidden" class="id-prod-val" value="">
+                                                <a href="#!" class="hidden-sm btn btn-dark" id="more-info-prod<%= rs.getString("id")%>" 
+                                                   onclick="moreInfo(this, <%= rs.getString("id")%>, <%= order_id%>)">
+                                                    Mas detalles <i class="fa fa-list"></i>
+                                                </a>
+                                            </p>
                                         </div>
                                         <div class="clearfix">
                                         </div>
@@ -108,9 +117,10 @@
                     </div>
                 </div>
             </div>
+            <jsp:include page="layouts/customer-testimony.jsp"></jsp:include>
         </div>
     </div>
     <!-- End: MUSA_carousel-product-cart-slider -->
 </div>
-
+<jsp:include page="product/more-info-product.jsp"></jsp:include>
 <jsp:include page="layouts/footer.jsp"></jsp:include>
