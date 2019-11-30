@@ -2,6 +2,12 @@
 
 # John Robert jewelry
 
+# [0.9.96] 30/11/2019
+## Updated
+- Cambio en diseño de Login
+## Added
+- Buscador de productos por nombres;
+
 # [0.9.95] 20/11/2019
 ## Updated
 - cambio en diseño del index

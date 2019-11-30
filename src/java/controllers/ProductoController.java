@@ -15,6 +15,7 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.json.Json;
+import javax.json.JsonArrayBuilder;
 import javax.json.JsonObjectBuilder;
 import javax.json.JsonValue;
 import javax.servlet.RequestDispatcher;
@@ -68,7 +69,7 @@ public class ProductoController extends HttpServlet {
             ResultSet data = promdl.getProductById(id);
             JsonObjectBuilder json = Json.createObjectBuilder();
             HttpSession session = request.getSession();
-            
+
             data.first();
             json.add("name", data.getString("name"));
             json.add("id", data.getString("id"));
@@ -142,6 +143,37 @@ public class ProductoController extends HttpServlet {
         request.setAttribute("data", rs);
         RequestDispatcher rq = request.getRequestDispatcher("product/edit.jsp");
         rq.forward(request, response);
+    }
+
+    /**
+     *
+     * @param request
+     * @param response
+     * @param text
+     * @throws IOException
+     * @throws ClassNotFoundException
+     * @throws SQLException
+     * @throws ServletException
+     */
+    protected void searchProduct(HttpServletRequest request, HttpServletResponse response, String text)
+            throws IOException, ClassNotFoundException, SQLException, ServletException {
+        ProductModel promdl = new ProductModel();
+        ResultSet rs = promdl.getProductoByText(text);
+        JsonArrayBuilder jsonArr = Json.createArrayBuilder();
+        JsonObjectBuilder json = Json.createObjectBuilder();
+        HttpSession ses = request.getSession();
+        while (rs.next()) {
+            json.add("auth", String.valueOf(ses.getAttribute("login")));
+            json.add("id", rs.getString("id"));
+            json.add("name", rs.getString("name"));
+            json.add("price", rs.getString("price"));
+            json.add("image", rs.getString("image"));
+            json.add("stock", rs.getString("stock"));
+            jsonArr.add(json.build());
+        }
+        try (PrintWriter out = response.getWriter()) {
+            out.print(jsonArr.build());
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -257,6 +289,18 @@ public class ProductoController extends HttpServlet {
                  {
                     try {
                         moreInfo(request, response, id_prod);
+                    } catch (ClassNotFoundException ex) {
+                        Logger.getLogger(ProductoController.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (SQLException ex) {
+                        Logger.getLogger(ProductoController.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+                break;
+            case "search":
+                String text = request.getParameter("search");
+                 {
+                    try {
+                        searchProduct(request, response, text);
                     } catch (ClassNotFoundException ex) {
                         Logger.getLogger(ProductoController.class.getName()).log(Level.SEVERE, null, ex);
                     } catch (SQLException ex) {

@@ -24,25 +24,28 @@
 <!-- Start: Login Form Clean -->
 <form class="" action="login" method="post">
     <h2 class="sr-only"></h2>
-    <div class="card">
-        <div class="card-header jr-primary">
-            <h1 class="text-white text-center">Login <i class="fas fa-sign-in-alt"></i></h1>
-        </div>
-        <div class="card-body" style="color:black;">
-            <div class="form-group">
-                <label for="email" class="form-check-label">
-                    <b>Email <i class="fas fa-envelope"></i></b>
-                </label>
-                <input class="form-control" type="email" name="email" placeholder="Email" required>
+
+    <div class="col-6 animated fadeInDown offset-3 mt-5 mb-5">
+        <div class="card">
+            <div class="card-header jr-primary">
+                <h1 class="text-white text-center">Login <i class="fas fa-sign-in-alt"></i></h1>
             </div>
-            <div class="form-group">
-                <label for="pass" class="form-check-label">
-                    <b>Contraseña <i class="fas fa-key"></i></b>
-                </label>
-                <input class="form-control" type="password" name="pass" placeholder="Contraseña" required="">
-            </div>
-            <div class="form-group">
-                <button class="btn btn-info btn-block text-white" type="submit">Ingresar</button>
+            <div class="card-body" style="color:black;">
+                <div class="form-group">
+                    <label for="email" class="form-check-label">
+                        <b>Email <i class="fas fa-envelope"></i></b>
+                    </label>
+                    <input class="form-control" type="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="pass" class="form-check-label">
+                        <b>Contraseña <i class="fas fa-key"></i></b>
+                    </label>
+                    <input class="form-control" type="password" name="pass" placeholder="Contraseña" required="">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-info btn-block text-white" type="submit">Ingresar</button>
+                </div>
             </div>
         </div>
     </div>

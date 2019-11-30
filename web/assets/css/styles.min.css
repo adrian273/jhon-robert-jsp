@@ -167,6 +167,10 @@ body::-webkit-scrollbar-track:active {
     background-color: #A993BF;
 }
 
+.bg-white {
+    background: white;
+    background-color: white;
+}
 /**
 ----------------------------------------
  navbar 

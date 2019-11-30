@@ -102,9 +102,8 @@
                                         </a>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <a class="nav-link" href="#">
-                                            <i class="fa fa-search"></i>
-                                        </a>
+                                        <input class="form-control mr-sm-2" type="search" onchange="searchProd(this)" onkeyup="searchProd(this)" 
+                                               placeholder="Buscar..." aria-label="Search">
                                     </li>
                                     <c:if test="${login}"> 
                                         <li class="nav-item" role="presentation">
@@ -123,7 +122,7 @@
                                             <a class="dropdown-toggle text-uppercase d-lg-flex align-items-lg-center nav-link" 
                                                data-toggle="dropdown" aria-expanded="false" 
                                                href="#">
-                                                Panel de ADM
+                                                ADM
                                             </a>
                                             <div class="dropdown-menu" role="menu">
                                                 <a class='dropdown-item' role='presentation' 
@@ -169,3 +168,4 @@
             </div>
         </div>
         <div class="container-fluid border-primary shadow" style="margin-top:6%;" id="app">
+            <jsp:include page="../layouts/search-result.jsp"></jsp:include>

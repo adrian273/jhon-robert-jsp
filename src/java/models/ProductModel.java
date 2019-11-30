@@ -90,6 +90,15 @@ public class ProductModel {
         ResultSet rs = db.result(query);
         return rs;
     }
+    
+    public ResultSet getProductoByText(String txt) throws SQLException {
+        String query = "SELECT *, categories.name as name_c "
+                + "FROM products "
+                + "LEFT JOIN categories ON products.categories_id = categories.id "
+                + "WHERE products.name LIKE '%" + txt + "%'";
+        ResultSet rs = db.result(query);
+        return rs;
+    }
 
     /**
      *
