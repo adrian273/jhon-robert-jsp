@@ -2,6 +2,18 @@
 
 # John Robert jewelry
 
+# [0.9.98] 02/12/2019
+# Changed
+- tamaño imagenes en card
+- en login se agrego nombre de  admin y pass para probar el administrador
+- en titulo de navbar se cambio por <beta>
+- en index, agregado la imagen que se tiene que poner (default o agregado por el usuario)
+- En buscador ahora se muestran las imagenes correspondientes
+
+# [0.9.97] 01/12/2019
+## Updated
+- Al buscar algo en la tienda se posiciona en los productos encontrados
+
 # [0.9.96] 30/11/2019
 ## Updated
 - Cambio en diseño de Login

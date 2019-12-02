@@ -49,7 +49,7 @@
                                 <img src="${path}/assets/img/logos/black.png" 
                                      width="40" height="40" 
                                      class="d-inline-block align-top" alt="">
-                                Jhon Robert <sup> <small>24K</small> </sup>
+                                Jhon Robert <sup> <small>Beta</small> </sup>
                             </a>
                             <button data-toggle="collapse" class="navbar-toggler" 
                                     data-target="#menu">

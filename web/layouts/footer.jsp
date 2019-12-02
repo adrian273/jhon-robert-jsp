@@ -103,6 +103,7 @@
     <div class="col-12"> 
         <p class="text-center">
             Joyeria Jhon Robert &reg; 2019 - Desarrollado por <a href="https://github.com/adrian273" target="blank"> Adrian </a>
+           ( version 0.9.98/Beta )
         </p>
     </div>
 </footer>

@@ -69,7 +69,11 @@
                             <div class="col-setting col-md-4 mb-5 mt-5 col-sm-4 col-xs-12">
                                 <div class="col-item wow animated fadeInLeft">
                                     <div class="photo">
+                                        <%if (rs.getString("image").equals("") || rs.getString("image").equals("null") || rs.getString("image").equals(null)) { %>
                                         <img src="assets/img/default.jpg" class="img-responsive" alt="a" />
+                                        <% } else { %>
+                                        <img src="<%=rs.getString("image")%>" class="img-responsive" alt="a" />
+                                        <% } %>
                                     </div>
                                     <div class="info">
                                         <div class="row">

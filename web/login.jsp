@@ -33,13 +33,13 @@
             <div class="card-body" style="color:black;">
                 <div class="form-group">
                     <label for="email" class="form-check-label">
-                        <b>Email <i class="fas fa-envelope"></i></b>
+                        <b>Email <i class="fas fa-envelope"></i></b> ( para probar administrador: <b>admin@djr.cl</b> )
                     </label>
                     <input class="form-control" type="email" name="email" placeholder="Email" required>
                 </div>
                 <div class="form-group">
                     <label for="pass" class="form-check-label">
-                        <b>Contraseña <i class="fas fa-key"></i></b>
+                        <b>Contraseña <i class="fas fa-key"></i></b> ( para probar administrador: <b>123</b> )
                     </label>
                     <input class="form-control" type="password" name="pass" placeholder="Contraseña" required="">
                 </div>

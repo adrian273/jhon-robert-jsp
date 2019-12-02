@@ -66,7 +66,8 @@
                                 String imagen = "";
                                 if (data.getString("image") != null || data.getString("image") != "" || data.getString("image") != "null") {
                                     imagen = data.getString("image").toString();
-
+                                } else {
+                                    imagen = "";
                                 }
 
                             %>
